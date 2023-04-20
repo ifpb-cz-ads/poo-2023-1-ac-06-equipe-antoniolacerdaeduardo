@@ -23,19 +23,53 @@ public void abreContaSimples(String nome, double valorInicialConta){
 }
 ```
 
-<h2>7. Identifique e explique o(s) erro(s) na classe abaixo:
-1 class Registro De Eleitor
-2 {
-3 /**
-4 * Declaração dos campos desta classe
-5 */
-6 int tituloDeEleitor; // número do título do eleitor
-7 String nome; // nome do eleitor
-8 short zonaEleitoral; // número da zona eleitoral
-9 } // fim da classe</h2>
-<p>O Erro principal deste código é que a classe foi nomeada de forma incorreta. para nomeação de classe é preciso que apenas um nome seja indicado. A forma correta de se utilizar, uma boa prática é utilizar o sistema de camelCase. Corrigindo: RegistroDeEleitor;</p>
+<h2>7. Identifique e explique o(s) erro(s) na classe abaixo:</h2>
 
+```java
+class Registro De Eleitor {
+    //Declaração dos campos desta classe
+    int tituloDeEleitor; // número do título do eleitor
+    String nome; // nome do eleitor
+    short zonaEleitoral; // número da zona eleitoral
+} // fim da classe
+```
 
+<p>O Erro principal deste código é que a classe foi nomeada de forma incorreta. para nomeação de classe é preciso que apenas um nome seja indicado. A prática recomendada é utilizar o sistema de camelCase. Exemplo: "registroDeEleitor".</p>
 
+<h2>8. Identifique e explique o(s) erro(s) na classe abaixo:</h2>
 
+```java
+class Teste2 {
+    //Declaração dos campos desta classe
+    int num1,num2;
+    //Declaração dos métodos desta classe
+    int maior() {
+        if (num1 > num2)
+        return true;
+        else return false;
+    }
+    void menor() {
+        if (num1 < num2)
+        return num1;
+        else return num2;
+    }
+} // fim da classe
+```
 
+<p>Foi possível identificar dois erros de sintaxe: não é possível retornar valor booleano no método "maior" que teve o retorno declarado como "int", nem é possível retornar qualquer valor no método "menor" que foi declarado sem retorno "void".</p>
+
+<h2>9. Identifique e explique o(s) erro(s) na classe abaixo:</h2>
+
+```java
+class TesteImpressao {
+    main(String[] args) {
+        System.out.println("7+2="+(7+2));
+        System.out.println("7-2="+(7-2));
+        System.out.println("7*2="+(7*2));
+        System.out.println("7/2="+(7/2));
+        return true;
+    }
+} // fim da classe
+```
+
+<p>A declaração do método "main" está incompleta. Falta definir o escopo "public", que o método é estático "static" e que não deve retornar nenhum valor ao final "void" (também, na contramão, ele define um valor booleano como retorno). </p>
