@@ -13,12 +13,12 @@
 public void abreContaSimples(String nome, double valorInicialConta){
     const double valorMinimo = 100.00;
 
-    nomeDoCorrentista = nome;
-    saldo = 0.00;
-    contaÉEspecial = false;
-
     if(valorInicialConta < 100){
         System.out.println("Você está tentando criar uma conta com um valor abaixo do mínimo que é de R$" + valorMinimo + ". Tente novamente com um valor correto!");
+    }else{    
+        nomeDoCorrentista = nome;
+        saldo = 0.00;
+        contaÉEspecial = false;
     }
 }
 ```
